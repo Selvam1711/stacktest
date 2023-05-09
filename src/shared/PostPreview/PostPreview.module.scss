@@ -1,0 +1,55 @@
+@use '../../styles/variables' as *;
+@use '../../styles/media' as *;
+
+.postPreview {
+  width: 100%;
+  overflow: hidden;
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.titleLink {
+  color: $foreground-color;
+  font-size: 22px;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.categories {
+  margin-bottom: 16px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include for-phone-only {
+    flex-direction: column;
+
+    & > :not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.footerLeft {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footerRight {
+  display: flex;
+  align-items: center;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}

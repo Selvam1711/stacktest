@@ -1,0 +1,52 @@
+@use '../../styles/variables' as *;
+
+.vote {
+  display: flex;
+  align-items: center;
+}
+
+.voteButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background-color: transparent;
+  color: $accent-4;
+
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  height: 32px;
+  min-width: 32px;
+
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  padding: 1px 6px;
+
+  transition: all linear 200ms 0ms;
+
+  &:hover {
+    background-color: $accent-2;
+  }
+}
+
+.voteCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  user-select: none;
+  height: 32px;
+  min-width: 25px;
+  padding: 1px 6px;
+}
+
+.positive {
+  color: $cyan-dark;
+}
+
+.negative {
+  color: $error;
+}

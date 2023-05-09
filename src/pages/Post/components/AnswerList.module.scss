@@ -1,0 +1,47 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/media' as *;
+
+.answers {
+  margin-bottom: 30px;
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin-bottom: 15px;
+
+  @include for-phone-only {
+    flex-direction: column;
+
+    & > :not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.headerTitle {
+  font-size: 22px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.sortedBy {
+  display: flex;
+  align-items: center;
+}
+
+.sortedByLabel {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.answersContent {
+  margin-bottom: 30px;
+}

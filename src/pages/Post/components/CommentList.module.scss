@@ -1,0 +1,67 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/media' as *;
+
+.control {
+  margin-left: 45px;
+
+  @include for-phone-only {
+    margin: 0;
+  }
+}
+
+.comments {
+  margin-top: 15px;
+  border-top: 1px solid $accent-2;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.addComment {
+  margin-top: 15px;
+  margin-left: 65px;
+  
+  @include for-phone-only {
+    margin: 0;
+  }
+}
+
+.notLoggedIn {
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+
+  & span {
+    margin: 0 5px;
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background-color: transparent;
+  color: $success-light;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  min-width: 32px;
+
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  transition: all linear 200ms 0ms;
+  box-shadow: none;
+
+  &:hover {
+    color: $success-dark;
+  }
+}

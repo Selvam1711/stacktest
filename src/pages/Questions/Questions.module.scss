@@ -1,0 +1,45 @@
+@use '../../styles/variables' as *;
+@use '../../styles/media' as *;
+
+.container {
+  background-color: $background-color;
+}
+
+.questions {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include for-tablet-portrait {
+    flex-direction: column-reverse;
+  }
+}
+
+.questioinsContent {
+  width: 70%;
+
+  @include for-tablet-portrait {
+    width: 100%;
+  }
+}
+
+.questionsFilter {
+  position: sticky;
+  top: 80px;
+  width: calc(30% - 15px);
+  margin-top: 56px;
+  padding: 26px;
+
+  background: $background-color;
+  border-radius: 6px;
+  border: 1px solid $accent-2;
+  box-shadow: none;
+  transition: all 0.2s ease;
+
+  @include for-tablet-portrait {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
